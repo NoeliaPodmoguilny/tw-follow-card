@@ -1,5 +1,11 @@
-import './app.css'
-import { TwitterFollowCard } from "./TwitterFollowCard.jsx";
+import { Navbar } from './Navbar/components/Navbar.jsx';
+import { TwitterFollowCard } from './TwitterFollowCard.jsx'
+import './App.css';
+
+
+// array menu
+const menu = ['Inicio', 'Productos', 'Nosotros', 'Contacto']
+
 
 //array de usars 
 const users = [
@@ -33,22 +39,28 @@ const users = [
 // EN LA APP VOY ARMANDO EL RENDERIZADO. IMPORTAMOS TODOS LOS COMPONENTES PARA IR ARMANDO LA APP
 export function App() {
     return (
-        <section className="App">
-    {
-        users.map(user => {
-            const {userName, name, isFollowing} = user
-                return (
-                    <TwitterFollowCard 
-                    // (OJO! para renderizar una lista de elementos en React debemos añadir la KEY!!)
-                        key={userName}
-                        userName={userName}
-                        name={name}
-                        initialIsFollowing={isFollowing}
-                    ></TwitterFollowCard>
-                )
-        })
-    }
+    <>
+        <section>
+            <Navbar menu={ menu } />
         </section>
+
+        <section className="App">
+        {
+            users.map(user => {
+                const {userName, name, isFollowing} = user
+                    return (
+                        <TwitterFollowCard 
+                        // (OJO! para renderizar una lista de elementos en React debemos añadir la KEY!!)
+                            key={userName}
+                            userName={userName}
+                            name={name}
+                            initialIsFollowing={isFollowing}
+                        ></TwitterFollowCard>
+                    )
+            })
+        }
+        </section>
+    </>
     )
 }
 // Los valores de attr booleanos false se pasan entre llaves {}, sino sólo se escribe el attr sin valor                             
