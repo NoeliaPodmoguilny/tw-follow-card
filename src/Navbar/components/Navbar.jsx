@@ -1,5 +1,5 @@
 import { NavbarItem, NavbarLogo, NavbarSearch } from "./"
-import { NavbarLayout } from "../layouts/NavbarLayout.jsx"
+import { NavbarLayout } from "../layouts"
 
 
 // con export const Navbar = () => {}  si o si cuando hacemos el import usamos { }

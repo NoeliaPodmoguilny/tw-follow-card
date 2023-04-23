@@ -1,13 +1,31 @@
-import { Navbar } from './Navbar/components/Navbar.jsx';
-import { TwitterFollowCard } from './TwitterFollowCard.jsx'
+import { Navbar } from './Navbar/components'
+import { TwitterFollowCard } from './FollowCard/TwitterFollowCard.jsx'
+import { Routess } from './Global/Routes';
 import './App.css';
 
 
 // array menu
-const menu = ['Inicio', 'Productos', 'Nosotros', 'Contacto']
+const menu = [
+{
+    name: 'Inicio',
+    link: '/'
+    },
+{
+    name: 'Productos',
+    link: './productos'
+    },
+{
+    name: 'Nosotros',
+    link: './nosotros'
+    },
+{
+    name: 'Contacto',
+    link: './contacto'
+    },
+]
 
 
-//array de usars 
+//array de users 
 const users = [
     {
     userName: 'midudev',
@@ -42,6 +60,7 @@ export function App() {
     <>
         <section>
             <Navbar menu={ menu } />
+            <Routess/>
         </section>
 
         <section className="App">

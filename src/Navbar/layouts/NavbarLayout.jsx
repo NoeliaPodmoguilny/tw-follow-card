@@ -7,7 +7,6 @@ export const NavbarLayout = ({ children }) => {
         justifyContent: 'space-evenly',
         alignItems: 'center',
 
-        width: '100vw',
         paddingTop: '1rem',
         paddingBottom: '1rem',
 
