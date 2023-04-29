@@ -1,5 +1,5 @@
 
-import { HooksPrincipales, UseState } from "./"
+import { HooksPrincipales, UseEffect, UseState } from "./"
 import { PropsTypeComponent } from "./Methods"
 
 
@@ -30,6 +30,7 @@ export const Hooks = () => {
                 funcion={ propType }
             />
             <UseState />
+            <UseEffect />
         </div>
     )
 }
